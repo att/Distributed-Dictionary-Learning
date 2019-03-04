@@ -7,7 +7,7 @@ The basic premise is that natural signals can be well approximated using sparse 
 of a few vectors, also called atoms, in some overcomplete basis, or so-called dictionary.
 
 We consider the case when it is cost- and time-prohibitive to gather the distributed data
-to a central location.   We then learn a collection of dictionaries through local computations
+to a central location. We then learn a collection of dictionaries through local computations
 together within inter-nodal computation to obtain a collaborative dictionary.
 
 The algorithm is cloud NN-K-SVD, meaning cloud = distributed, NN for non-negative weights
@@ -28,10 +28,22 @@ The paper is also part of the [IEEE Digital Library].
 Developed for AT&T by Tong Wu (https://github.com/twugithub)
 and by Colin Goodall (https://github.com/ColinGoodall) and Raif Rustamov
 
+## Citation
+Any part of this code used in your work should be cited as follows:
+
+T. Wu, R. M. Rustamov and C. Goodall, "Distributed learning of human mobility patterns from cellular network data," in Proc. 51st Annu. Conf. on Information Sciences and Systems, 2017. Companion Code, ver. 1.0.
+
+## Reporting of issues
+Any issues in this code should be reported to T. Wu. However, this companion code is being provided on an "As IS" basis to support the ideals of reproducible research. As such, no guarantees are being made that the reported issues will be eventually fixed.
+
+## Computational environment
+This code has been tested in the following computational environments. While it can run in other environments also, we can neither provide such guarantees nor can help you make it compatible in other environments.
+
+Windows 7, 10/Linux with Python 3.7
+
 ## Alternative approaches
 
-The two synthetic data Python source files provide programs for distributed dictionary learning,
-for K-SVD and NN-K-SVD.   For the local alternative, run as follows:-
+The two synthetic data Python source files provide programs for distributed dictionary learning based on K-SVD and NN-K-SVD.
 
 To fit an overcomplete approximating basis, run as follows:-
 
@@ -45,44 +57,19 @@ Typically, each calculation involves iteration of 2 parts, as shown in the [pape
 
 Each file is 30 - 140 lines of python
 
-* cloudksvd_syntheticdata_main.py
+* cloudksvd_syntheticdata_main.py and cloudnnksvd_syntheticdata_main.py - examples of the usage for the distributed algorithms using synthetic data
 
-companion code to CISS 2017 paper; start here for cloud K-SVD
+* generategraph.py - generates random network graph, function gengraph, used with synthetic data routines
 
-* cloudnnksvd_syntheticdata_main.
+* distributeddictionarylearning.py - the implementation of cloud_ksvd and cloud_nnksvd
 
-start here for cloud NN-K-SVD
+* dictionaryupdate.py - function 12_update_dict for updating the dictionary in K-SVD; nn12_update_dict for updating the dictionary in NN-KSVD
 
-* generategraph.py
+* centralizeddictionarylearning.py - functions dict_learning_ksvd, dict_learning_nnksvd
 
-generate random network graph, function gengraph, used with synthetic data routines
+* distributedpowermethod.py - function distri_powermethod for distributed power method across network graph
 
-* distributeddictionarylearning.py
+* sparsecoding.py - functions omp and sparse_encode_omp for orthogonal matching pursuit, and nnmp and sparse_encode_nnmp for nonnegative matching pursuit
 
-defines fucntions cloud_ksvd and cloud_nnksvd
-includes in arguments the network graph
-
-* dictionaryupdate.py
-
-functions 12_update_dict, update the dictionary for K-SVD
-nn12_update_dict, update the dictionary for NN-KSVD
-
-* centralizeddictionarylearning.py
-
-functions dict_learning_ksvd, dict_learning_nnksvd
-
-* distributedpowermethod.py
-
-function distri_powermethod for power method across network graph
-
-* sparsecoding.py
-
-functions omp and sparse_encode_omp for orthogonal matching pursuit, and
-nnmp and sparse_encode_nnmp for nonnegative matching pursuit
-
-* breathfirstsearch.py
-
-function bfs to determine paths through the network from the
-adjacency matrix of the network, the starting node, and the destination node;
-function find_paths given the spanning tree output from bfs
+* breathfirstsearch.py - function bfs to determine paths through the network from the adjacency matrix of the network, the starting node, and the destination node; function find_paths gives the spanning tree output from bfs
 
