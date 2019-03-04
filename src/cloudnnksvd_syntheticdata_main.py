@@ -41,7 +41,7 @@ networkg = gengraph(NodeN, p)
 random.seed(time.time())
 n_features = 20
 TotalAtoms = 50
-print "generating dictionary..."
+print("generating dictionary...")
 D_gt = generate_dict(n_features, TotalAtoms)
 LocalAtomN = 40
 sp = 3

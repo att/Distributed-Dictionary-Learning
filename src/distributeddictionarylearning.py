@@ -131,9 +131,10 @@ def cloud_nnksvd(X, AtomN, dict_init, s, NodeN, networkGraph, vec_init, max_iter
                 newatom = np.copy(newu)
                 
                 for nodes in range(NodeN):
-                    normu = np.linalg.norm(newatom[nodes,:])
-                    D[:,k,iters+1,nodes] = newatom[nodes,:]/normu
-                    theta[nodes][k,index_temp[nodes]] = v_temp[nodes]*normu
+                    if len(index_temp[nodes])>0:
+                        normu = np.linalg.norm(newatom[nodes,:])
+                        D[:,k,iters+1,nodes] = newatom[nodes,:]/normu
+                        theta[nodes][k,index_temp[nodes]] = v_temp[nodes]*normu
                     
         dt = time.time() - t0
         print('the %dth iteration takes %f seconds' %(iters,dt))
