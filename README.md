@@ -46,7 +46,7 @@ Typically, each calculation involves iteration of 2 parts, as shown in the [pape
 
 * Part 2 is the dictionary update, collaboratively across the sites using inter-site connections specified in the network graph.
 
-## Overview of Python Source Files
+## Overview of Python source files
 
 * cloudksvd_syntheticdata_main.py and cloudnnksvd_syntheticdata_main.py - examples of the usage of the distributed/centralized algorithms using synthetic data
 
