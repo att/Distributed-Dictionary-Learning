@@ -16,17 +16,14 @@ SVD for the underlying singular value decomposition approach applied iteratively
 
 Simpler and less effective variants are local K-SVD, local NN-K-SVD, K-SVD, and NN-K-SVD.
 
-For an application to anonymized call data see [CISS 2017 paper] and [CISS 2017 talk].
+For an application to anonymized call data see [paper] and [talk].
 The paper is also part of the [IEEE Digital Library].
 
-[CISS 2017 paper]: https://www.github.com/att/distributed-dictionary-learning/CISS2017_Proceedings.pdf
-[CISS 2017 talk]: https://www.github.com/att/distributed-dictionary-learning/CISS2017_Talk.pdf
 [IEEE Digital Library]: https://ieeexplore.ieee.org/document/7926085
-[paper]: https://www.github.com/att/distributed-dictionary-learning/CISS2017_Proceedings.pdf
-[talk]: https://www.github.com/att/distributed-dictionary-learning/CISS2017_Talk.pdf
+[paper]: https://github.com/att/Distributed-Dictionary-Learning/blob/master/CISS2017_Proceedings.pdf
+[talk]: https://github.com/att/Distributed-Dictionary-Learning/blob/master/CISS2017_Talk.pdf
 
-Developed for AT&T by Tong Wu (https://github.com/twugithub)
-and by Colin Goodall (https://github.com/ColinGoodall) and Raif Rustamov
+Developed for AT&T by Tong Wu (https://github.com/twugithub), Colin Goodall (https://github.com/ColinGoodall) and Raif Rustamov
 
 ## Citation
 Any part of this code used in your work should be cited as follows:
