@@ -37,15 +37,11 @@ T. Wu, R. M. Rustamov and C. Goodall, "Distributed learning of human mobility pa
 Any issues in this code should be reported to T. Wu. However, this companion code is being provided on an "As IS" basis to support the ideals of reproducible research. As such, no guarantees are being made that the reported issues will be eventually fixed.
 
 ## Computational environment
-This code has been tested in the following computational environments. While it can run in other environments also, we can neither provide such guarantees nor can help you make it compatible in other environments.
-
-Windows 7, 10/Linux with Python 3.7
+This code has been tested in Windows 7, 10/Linux with Python 3.7. While it can run in other environments also, we can neither provide such guarantees nor can help you make it compatible in other environments.
 
 ## Alternative approaches
 
 The two synthetic data Python source files provide programs for distributed dictionary learning based on K-SVD and NN-K-SVD.
-
-To fit an overcomplete approximating basis, run as follows:-
 
 Typically, each calculation involves iteration of 2 parts, as shown in the [paper] and [talk].
 
@@ -55,21 +51,19 @@ Typically, each calculation involves iteration of 2 parts, as shown in the [pape
 
 ## Overview of Python Source Files
 
-Each file is 30 - 140 lines of python
+* cloudksvd_syntheticdata_main.py and cloudnnksvd_syntheticdata_main.py - examples of the usage of the distributed/centralized algorithms using synthetic data
 
-* cloudksvd_syntheticdata_main.py and cloudnnksvd_syntheticdata_main.py - examples of the usage for the distributed algorithms using synthetic data
+* generategraph.py - generates a random network graph
 
-* generategraph.py - generates random network graph, function gengraph, used with synthetic data routines
+* distributeddictionarylearning.py - the implementation of cloud K-SVD and cloud NN-K-SVD
 
-* distributeddictionarylearning.py - the implementation of cloud_ksvd and cloud_nnksvd
+* dictionaryupdate.py - function 12_update_dict for updating the dictionary in K-SVD; nn12_update_dict for updating the dictionary in NN-K-SVD
 
-* dictionaryupdate.py - function 12_update_dict for updating the dictionary in K-SVD; nn12_update_dict for updating the dictionary in NN-KSVD
+* centralizeddictionarylearning.py - the implementation of K-SVD and NN-K-SVD
 
-* centralizeddictionarylearning.py - functions dict_learning_ksvd, dict_learning_nnksvd
-
-* distributedpowermethod.py - function distri_powermethod for distributed power method across network graph
+* distributedpowermethod.py - distributed power method for the generated network graph
 
 * sparsecoding.py - functions omp and sparse_encode_omp for orthogonal matching pursuit, and nnmp and sparse_encode_nnmp for nonnegative matching pursuit
 
-* breathfirstsearch.py - function bfs to determine paths through the network from the adjacency matrix of the network, the starting node, and the destination node; function find_paths gives the spanning tree output from bfs
+* breathfirstsearch.py - function bfs determines paths through the network from the adjacency matrix of the network, the starting node, and the destination node; function find_paths gives the spanning tree output from bfs
 
