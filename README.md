@@ -23,7 +23,7 @@ The paper is also part of the [IEEE Digital Library].
 [paper]: https://github.com/att/Distributed-Dictionary-Learning/blob/master/CISS2017_Proceedings.pdf
 [talk]: https://github.com/att/Distributed-Dictionary-Learning/blob/master/CISS2017_Talk.pdf
 
-Developed for AT&T by Tong Wu (https://github.com/twugithub), Colin Goodall (https://github.com/ColinGoodall) and Raif Rustamov
+Developed for AT&T by Tong Wu (https://github.com/twugithub), Colin Goodall (https://github.com/ColinGoodall) and Raif Rustamov.
 
 ## Citation
 Any part of this code used in your work should be cited as follows:
