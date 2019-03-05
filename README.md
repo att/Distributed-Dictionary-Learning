@@ -36,7 +36,7 @@ Any issues in this code should be reported to T. Wu. However, this companion cod
 ## Computational environment
 This code has been tested in Windows 7, 10/Linux with Python 3.7. While it can run in other environments also, we can neither provide such guarantees nor can help you make it compatible in other environments.
 
-## Alternative approaches
+## Overview of Python source files
 
 The two synthetic data Python source files provide programs for distributed dictionary learning based on K-SVD and NN-K-SVD.
 
@@ -46,7 +46,7 @@ Typically, each calculation involves iteration of 2 parts, as shown in the [pape
 
 * Part 2 is the dictionary update, collaboratively across the sites using inter-site connections specified in the network graph.
 
-## Overview of Python source files
+The detailed instructions are as follows:
 
 * cloudksvd_syntheticdata_main.py and cloudnnksvd_syntheticdata_main.py - examples of the usage of the distributed/centralized algorithms using synthetic data
 
