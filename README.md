@@ -16,12 +16,10 @@ SVD for the underlying singular value decomposition approach applied iteratively
 
 Simpler and less effective variants are local K-SVD, local NN-K-SVD, K-SVD, and NN-K-SVD.
 
-For an application to anonymized call data see [paper] and [talk].
-The paper is also part of the [IEEE Digital Library].
+For an application to anonymized call data see [paper], which is also a part of the [IEEE Digital Library].
 
 [IEEE Digital Library]: https://ieeexplore.ieee.org/document/7926085
 [paper]: https://github.com/att/Distributed-Dictionary-Learning/blob/master/CISS2017_Proceedings.pdf
-[talk]: https://github.com/att/Distributed-Dictionary-Learning/blob/master/CISS2017_Talk.pdf
 
 Developed for AT&T by Tong Wu (https://github.com/twugithub), Colin Goodall (https://github.com/ColinGoodall) and Raif Rustamov.
 
@@ -40,7 +38,7 @@ This code has been tested in Windows 7, 10/Linux with Python 3.7. While it can r
 
 The two synthetic data Python source files provide programs for distributed dictionary learning based on K-SVD and NN-K-SVD.
 
-Typically, each calculation involves iteration of 2 parts, as shown in the [paper] and [talk].
+Typically, each calculation involves iteration of 2 parts, as shown in the [paper].
 
 * Part 1 is sparse coding, where each site computes locally the sparse codes for its local training data.
 
